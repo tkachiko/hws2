@@ -22,6 +22,7 @@
   border-radius: 10px 10px 10px 0;
   grid-column: 2/3;
   grid-row: 1;
+
 }
 
 .text:after {
@@ -40,6 +41,7 @@
 .name {
   text-align: left;
   padding: 0 0 5px 0;
+  font-weight: bold;
 }
 
 .messageText {

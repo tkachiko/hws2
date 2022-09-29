@@ -24,6 +24,7 @@
   position: relative;
   border-radius: 10px 10px 0 10px;
   grid-row: 1;
+  color: #FFFFFF;
 }
 
 .friendText:after {
@@ -42,6 +43,7 @@
 .friendName {
   text-align: right;
   padding: 0 0 5px 0;
+  font-weight: bold;
 }
 
 .friendMessageText {
