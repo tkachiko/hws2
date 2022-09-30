@@ -2,34 +2,102 @@
 }
 
 .inputAndButtonContainer {
+  display: flex;
 }
 
 .error {
+  color: red;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+  position: relative;
 }
 
 .input {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 10px;
+  width: 372px;
+  outline: 0;
+  outline-offset: 0;
 }
 
 .input:focus {
+  outline: none;
 }
 
 .errorInput {
+  border: 1px solid #c00;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 10px;
+  width: 372px;
 }
 
 .button {
+  border: 1px solid #d1d1d1;
+  border-radius: 3px;
+  font-weight: 700;
+  margin-left: 10px;
+  align-items: center;
+  background: #06c;
+  color: #fff;
+  gap: 10px;
+  height: 36px;
+  justify-content: center;
+  padding: 5px 24px;
+  width: 78px;
+
 }
 
 .button:focus {
+  align-items: center;
+  background: #06c;
+  color: #fff;
+  gap: 10px;
+  height: 36px;
+  justify-content: center;
+  padding: 5px 24px;
+  width: 78px;
 }
 
 .button:active {
+  align-items: center;
+  border-radius: 3px;
+  gap: 10px;
+  height: 36px;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 5px 24px;
+  width: 78px;
 }
 
 .button:disabled {
+  align-items: center;
+  border-radius: 3px;
+  gap: 10px;
+  height: 36px;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 5px 24px;
+  width: 78px;
+  opacity: .5;
 }
 
 .text {
+  color: #000000;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
 
 .greeting {
+  margin-top: 10px;
+  position: relative;
 }

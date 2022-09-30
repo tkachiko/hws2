@@ -4,11 +4,20 @@
 
 .hw {
   width: 1280px;
-  margin: 0 auto;
+  margin: 10px;
 }
 
 .hwTitle {
-
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  height: 27px;
+  left: 70px;
+  line-height: 27px;
+  margin: 10px;
+  width: 165px;
 }
 
 .hwMessages {
