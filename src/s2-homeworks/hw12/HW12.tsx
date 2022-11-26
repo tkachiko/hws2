@@ -21,7 +21,7 @@ const themes = [
 
 const HW12 = () => {
   // взять ид темы из редакса
-  const themeId = useSelector<AppStoreType>(store => Number(store.theme.themeId));
+  const themeId = useSelector<AppStoreType>(store => store.theme.themeId);
   const dispatch = useDispatch();
 
   const change = (id: number) => { // дописать функцию
@@ -29,8 +29,9 @@ const HW12 = () => {
   };
 
   useEffect(() => {
-    document.documentElement.dataset.theme = themeId + '';
+    Number(document.documentElement.dataset.theme = themeId + '');
   }, [themeId]);
+
   return (
     <div id={'hw12'}>
       <div id={'hw12-text'} className={s2.hwTitle}>
