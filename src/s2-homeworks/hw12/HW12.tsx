@@ -21,12 +21,10 @@ const themes = [
 
 const HW12 = () => {
   // взять ид темы из редакса
-  const themeId = useSelector<AppStoreType>(store => store.theme.themeId);
+  const themeId = useSelector<AppStoreType>(store => Number(store.theme.themeId));
   const dispatch = useDispatch();
-  console.log('themeId is: ' + themeId);
 
   const change = (id: number) => { // дописать функцию
-    console.log('change func id: ' + id);
     dispatch(changeThemeId(id));
   };
 
