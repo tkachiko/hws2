@@ -38,31 +38,34 @@ const HW13 = () => {
         setImage(success200);
         // дописать
         setInfo('');
-        setText(res.data.statusText)
+        setText(res.data.errorText);
         setInfo(res.data.info);
       })
       .catch((e) => {
         // дописать
-        if(e.response.status === 500) {
+        if (e.response.status === 500) {
+          setText(e.response.data.errorText);
           setInfo(e.response.data.info);
-          setText(e.response.statusText)
           setCode('Код 500!');
           setImage(error500);
         }
-        if(e.response.status === 400) {
+        if (e.response.status === 400) {
+          setText(e.response.data.errorText);
           setInfo(e.response.data.info);
-          setText(e.response.statusText)
           setCode('Код 400!');
           setImage(error400);
         }
-        if(x === null) {
-          console.log(e);
-          setImage(errorUnknown)
+        if (x === null) {
+          setCode('Error!');
+          setImage(errorUnknown);
           setInfo(e.name);
-          setText(e.message)
+          setText(e.message);
+          console.log(e);
         }
       });
   };
+
+  const isButtonDisabled = info === '...loading';
 
   return (
     <div id={'hw13'}>
@@ -75,7 +78,7 @@ const HW13 = () => {
             onClick={send(true)}
             xType={'secondary'}
             // дописать
-
+            disabled={isButtonDisabled}
           >
             Send true
           </SuperButton>
@@ -84,7 +87,7 @@ const HW13 = () => {
             onClick={send(false)}
             xType={'secondary'}
             // дописать
-
+            disabled={isButtonDisabled}
           >
             Send false
           </SuperButton>
@@ -93,7 +96,7 @@ const HW13 = () => {
             onClick={send(undefined)}
             xType={'secondary'}
             // дописать
-
+            disabled={isButtonDisabled}
           >
             Send undefined
           </SuperButton>
@@ -102,7 +105,7 @@ const HW13 = () => {
             onClick={send(null)} // имитация запроса на не корректный адрес
             xType={'secondary'}
             // дописать
-
+            disabled={isButtonDisabled}
           >
             Send null
           </SuperButton>
