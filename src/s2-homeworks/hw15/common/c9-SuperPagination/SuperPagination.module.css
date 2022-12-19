@@ -1,11 +1,13 @@
 .pagination {
-    display: flex;
+  display: flex;
+  padding: 30px 0;
 }
 
 .text1 {
-
+padding: 0 10px;
+  text-transform: capitalize;
 }
 
 .text2 {
-
+  padding: 0 10px;
 }
