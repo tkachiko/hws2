@@ -4,8 +4,8 @@ import down from './../../../../assets/icons/down.png'
 import updown from './../../../../assets/icons/updown.png'
 
 // добавить в проект иконки и импортировать
-const downIcon = up
-const upIcon = down
+const downIcon = down
+const upIcon = up
 const noneIcon = updown
 
 export type SuperSortPropsType = {
@@ -18,16 +18,8 @@ export type SuperSortPropsType = {
 export const pureChange = (sort: string, down: string, up: string) => {
   // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
 
-  switch (sort) {
-    case '':
-      return down
-    case down:
-      return up
-    case up:
-      return ''
-  }
-  return down
-   // исправить
+  return sort === '' ? down : sort === down ? up : sort === up ? '' : down
+  // исправить
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
